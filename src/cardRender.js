@@ -159,6 +159,7 @@ class Interface extends React.Component {
     render() {
         return (
             <div className="container">
+                <br></br>
                 <form className="row g-3" onSubmit={this.handleSubmit}>
                 <div className="col-auto">
                     <label htmlFor="staticZip" className="visually-hidden">Zip</label>

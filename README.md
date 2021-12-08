@@ -1,5 +1,7 @@
 # Simple Weather App
 
+![Screenshot](./public/app-screenshot.png)
+
 ## Getting Started
 
 ## Requirements
