@@ -30,7 +30,7 @@ The provided services here utilize public APIs without keys. Please be respectfu
 
 ## Attributions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Zip Code data provided by [USGS](https://webapps.usgs.gov/)
-Weather data provided by [7timer](http://www.7timer.info/index.php?lang=en)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). \
+Zip Code data provided by [USGS](https://webapps.usgs.gov/) \
+Weather data provided by [7timer](http://www.7timer.info/index.php?lang=en) \
 Icons provided by [Icons8](https://icons8.com/icon/set/weather/ios--animated)

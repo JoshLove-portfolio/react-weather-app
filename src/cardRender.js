@@ -51,7 +51,7 @@ function Cards(props) {
 
     let cards = [];
 
-    for (let i = 0; i < 5; i++){
+    for (let i = 0; i < 7; i++){
         cards.push(
             <div className="col">
                 <div className="card">
