@@ -2,6 +2,12 @@
 
 ## Getting Started
 
+## Requirements
+
+Node.js & NPM -> Should be installed together (https://nodejs.org/en/download/)
+
+## Running
+
 Start by either downloading this project or forking it. Then, change directories into the location on your local machine. 
 
 Open a terminal and run the following to install dependencies:
