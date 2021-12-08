@@ -2,10 +2,12 @@ import React, { useEffect } from 'react';
 import axios from 'axios';
 import {trackPromise} from 'react-promise-tracker';
 
+//Load local JSON file which holds the categories to translate weather API call
 import jsonData from './weather_API_data.json';
 
 function Cards(props) {
 
+    //Convert date format from YYYYMMDD to MM/DD/YYYY which is compatiable with Date library
     function convertDate(num) {
         let string_num = num.toString();
         let year = string_num.slice(0, 4);
@@ -14,14 +16,20 @@ function Cards(props) {
         return month + '/' + day + '/' + year
     }
 
+    //Prop has updated to the point that weather data has been retrieved
     if (props.value.weatherData.length != 0) {
         let cards = [];
         var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+        //Build the 7 cards
         for (let i = 0; i < props.value.weatherData.length; i++){
+
+            //Set the current day, max temp and min temp for the current position in the weatherData array
             let currentDay = new Date(convertDate(props.value.weatherData[i].date));
             let maxTemp = props.value.weatherData[i].temp2m.max * 9 / 5 + 32;
             let minTemp = props.value.weatherData[i].temp2m.min * 9 / 5 + 32;
+
+            //Push the new card into the cards array
             cards.push(
                 <div className="col">
                     <div className="card">
@@ -46,9 +54,11 @@ function Cards(props) {
             )
         }
 
+        //Return cards array to render
         return cards;
     }
 
+    //Weatherdata hasn't been called yet, create placeholder cards
     let cards = [];
 
     for (let i = 0; i < 7; i++){
@@ -72,14 +82,13 @@ function Cards(props) {
 
 class Interface extends React.Component {
 
+    //Constructor which holds all of the necessary data that's used by the Cards function
     constructor(props) {
         super(props);
         this.state = {
             zip: null,
             lat: null,
             long: null,
-            gridX: null,
-            gridY: null,
             weatherData: [],
             meaningData: JSON.parse(JSON.stringify(jsonData))
         };
@@ -89,6 +98,7 @@ class Interface extends React.Component {
         this.getWeatherData = this.getWeatherData.bind(this);
     }
 
+    //Calls 7timer API with lat/long data and calls state set function
     getWeatherData() {
         let url = 'request'
         trackPromise(
@@ -98,13 +108,14 @@ class Interface extends React.Component {
         );
     }
 
+    //Takes in API call data and sets it to the current state
     set(res, url) {
         if (url === 'tx'){
             this.setState({
                 lat: res.data[0].Lat,
                 long: res.data[0].Lon,
             }, () => {
-                this.getWeatherData();
+                this.getWeatherData(); //Callback following setting of lat/long since it's imperative those are set first
             });
         } else {
             this.setState({
@@ -114,6 +125,7 @@ class Interface extends React.Component {
         
     }
 
+    //Call USGS API to retrieve zipCode -> lat/long data and then pass that into the set function
     convertZip() {
         let url = 'tx';
         axios
@@ -125,6 +137,7 @@ class Interface extends React.Component {
         .catch(error => console.log(error));
     }
 
+    //Function to handle submit event on the ZipField element
     handleSubmit(event) {
         this.setState({
             zip: event.target.elements.ZipField.value
@@ -134,6 +147,7 @@ class Interface extends React.Component {
         event.preventDefault();
     }
     
+    //Renders the cards -> props is passed down to Cards function which allows for them to update once all the API calls have been made
     renderCards(){
         return (
             <div className="container">
@@ -156,6 +170,7 @@ class Interface extends React.Component {
         )
     }
 
+    //Render the main page
     render() {
         return (
             <div className="container">

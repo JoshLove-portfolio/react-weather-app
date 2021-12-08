@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+//For loading icon
 import { usePromiseTracker } from 'react-promise-tracker';
 import Loader from 'react-loader-spinner';
 
@@ -27,7 +29,8 @@ const Loading = props => {
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <Loading />
+    {/* Only shown if the long 7timer call is going on  */}
+    <Loading /> 
   </React.StrictMode>,
   document.getElementById('root')
 );
