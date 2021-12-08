@@ -148,7 +148,7 @@ class Interface extends React.Component {
                     <br></br>
                     Weather Data provided by: <a href="http://www.7timer.info/index.php?lang=en" target="_blank">7timer</a>
                     <br></br>
-                    Icons provided by: <a href="https://icons8.com/icon/set/weather/ios--animated>" target="_blank">Icons8</a>
+                    Icons provided by: <a href="https://icons8.com/icon/set/weather/ios--animated" target="_blank">Icons8</a>
                     <br></br>
                     Created by: <a href="https://github.com/JoshLove-portfolio" target="_blank">Josh Love</a>
                 </div>
