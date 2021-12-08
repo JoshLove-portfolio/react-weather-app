@@ -3,10 +3,31 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { usePromiseTracker } from 'react-promise-tracker';
+import Loader from 'react-loader-spinner';
+
+//Credit: https://www.basefactor.com/react-how-to-display-a-loading-indicator-on-fetch-calls
+const Loading = props => {
+  const {promiseInProgress} = usePromiseTracker();
+  return (
+    promiseInProgress &&
+    <div style={{
+      width: "100%",
+      height: "100",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center"
+    }}>
+
+      <Loader type="ThreeDots" height="100" width="100" color="#0275d8"></Loader>
+    </div>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Loading />
   </React.StrictMode>,
   document.getElementById('root')
 );

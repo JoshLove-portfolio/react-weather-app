@@ -1,0 +1,136 @@
+{
+    "cloud_cover": {
+        "1": [
+            "0%",
+            "6%"
+        ],
+        "2": [
+            "6%",
+            "19%"
+        ],
+        "3": [
+            "19%",
+            "31%"
+        ],
+        "4": [
+            "31%",
+            "44%"
+        ],
+        "5": [
+            "44%",
+            "56%"
+        ],
+        "6": [
+            "56%",
+            "69%"
+        ],
+        "7": [
+            "69%",
+            "81%"
+        ],
+        "8": [
+            "81%",
+            "94%"
+        ],
+        "9": [
+            "94%",
+            "100%"
+        ]
+    },
+    "lifted_index": {
+        "-10": "Below -7",
+        "-6": "-7 to -5",
+        "-4": "-5 to -3",
+        "-1": "-3 to 0",
+        "2": "0 to 4",
+        "6": "4 to 8",
+        "10": "8 to 11",
+        "15": "Over 11"
+    },
+    "2m_temp": {
+        "0": [
+            "-76",
+            "60"
+        ]
+    },
+    "2_humid": {
+        "0": [
+            "0",
+            "100"
+        ]
+    },
+    "10m_wind": {
+        "N": "N",
+        "NE": "NE",
+        "E": "E",
+        "SE": "SE",
+        "S": "S",
+        "SW": "SW",
+        "W": "W",
+        "NW": "NW"
+    },
+    "wind_speed": {
+        "1": "calm",
+        "2": "light",
+        "3": "moderate",
+        "4": "fresh",
+        "5": "strong",
+        "6": "gale",
+        "7": "storm",
+        "8": "hurricane"
+    },
+    "percip_type": {
+        "snow": "snow",
+        "rain": "rain",
+        "frzr": "freezing rain",
+        "icep": "ice pellets",
+        "none": "none"
+    },
+    "percip_amount": {
+        "0": "None",
+        "1": "0-0.25mm/hr",
+        "2": "0.25-1mm/hr",
+        "3": "1-4mm/hr",
+        "4": "4-10mm/hr",
+        "5": "10-16mm/hr",
+        "6": "16-30mm/hr",
+        "7": "30-50mm/hr",
+        "8": "50-75mm/hr",
+        "9": "Over 75mm/hr"
+    },
+    "weather_type": {
+        "clear": "Clear",
+        "pcloudy": "Partly Cloudy",
+        "mcloudy": "Mostly Cloudy",
+        "cloudy": "Cloudy",
+        "humid": "Humid",
+        "lightrain": "Light Rain",
+        "oshower": "Occasional Showers",
+        "ishower": "Intermittent Showers",
+        "lightsnow": "Light Snow",
+        "rain": "Rain",
+        "snow": "Snow",
+        "rainsnow": "Freezing rain",
+        "ts": "Thunderstorms",
+        "tsrain": "Thunderstorms with rain"
+    },
+    "undefined": {
+        "-9999": "undefined"
+    },
+    "ico_assets": {
+        "clear": "/icons8-sun.gif",
+        "pcloudy": "/icons8-partly-cloudy-day.gif",
+        "mcloudy": "/icons8-partly-cloudy-day.gif",
+        "cloudy": "/icons8-partly-cloudy-day.gif",
+        "humid": "/icons8-haze.gif",
+        "lightrain": "/icons8-light-rain.gif",
+        "oshower": "/icons8-light-rain.gif",
+        "ishower": "/icons8-light-rain.gif",
+        "lightsnow": "/icons8-light-snow.gif",
+        "rain": "/icons8-torrential-rain.gif",
+        "snow": "/icons8-snow-storm.gif",
+        "rainsnow": "/icons8-rain-cloud.gif",
+        "ts": "/icons8-storm.gif",
+        "tsrain": "/icons8-torrential-rain.gif"
+    }
+}
