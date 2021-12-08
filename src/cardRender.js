@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
+
+//Library used to track the long API call to 7timer
 import {trackPromise} from 'react-promise-tracker';
 
 //Load local JSON file which holds the categories to translate weather API call
