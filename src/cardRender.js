@@ -42,13 +42,13 @@ function Cards(props) {
                             </h5>
                             <p className="card-text">
                                 Forecast: {props.value.meaningData.weather_type[props.value.weatherData[i].weather]}
-                                <br></br>
+                                <br/>
                                 Wind Speed: {props.value.meaningData.wind_speed[props.value.weatherData[i].wind10m_max]}
-                                <br></br>
+                                <br/>
                                 High Temp: {Math.round(maxTemp)}&#8457;
-                                <br></br>
+                                <br/>
                                 Low Temp: {Math.round(minTemp)}&#8457;
-                                <br></br>
+                                <br/>
                             </p>
                         </div>
                     </div>
@@ -153,15 +153,15 @@ class Interface extends React.Component {
                     <Cards value={this.state}/>
                 </div>
                 <div>
-                <br></br>
-                <br></br>
-                <br></br>
+                <br/>
+                <br/>
+                <br/>
                     Location Services provided by: <a href="https://webapps.usgs.gov/" target="_blank" rel="noreferrer">USGS</a>
-                    <br></br>
+                    <br/>
                     Weather Data provided by: <a href="http://www.7timer.info/index.php?lang=en" target="_blank" rel="noreferrer">7timer</a>
-                    <br></br>
+                    <br/>
                     Icons provided by: <a href="https://icons8.com/icon/set/weather/ios--animated" target="_blank" rel="noreferrer">Icons8</a>
-                    <br></br>
+                    <br/>
                     Created by: <a href="https://github.com/JoshLove-portfolio" target="_blank" rel="noreferrer">Josh Love</a>
                 </div>
             </div>
