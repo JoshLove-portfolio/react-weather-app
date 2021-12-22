@@ -63,22 +63,18 @@ function Cards(props) {
     //Weatherdata hasn't been called yet, create placeholder cards
     let cards = [];
 
-    for (let i = 0; i < 7; i++){
-        cards.push(
-            <div className="col">
-                <div className="card">
-                    <div className="card-body">
-                        <h5 className="card-title">
-                        </h5>
-                        <p className="card-text">
-                            Enter your zip code!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        )
+    const defaultStyle = {
+        textAlign: 'center',
+        fontWeight: 'bold'
     }
 
+    cards.push(
+        <div className="col">
+            <p style={defaultStyle}>
+                Please enter your zip code to begin!
+            </p>
+        </div>
+    )
     return cards;
 }
 
