@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import axios from 'axios';
 
 //Library used to track the long API call to 7timer
@@ -19,9 +19,9 @@ function Cards(props) {
     }
 
     //Prop has updated to the point that weather data has been retrieved
-    if (props.value.weatherData.length != 0) {
+    if (props.value.weatherData.length !== 0) {
         let cards = [];
-        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
         //Build the 7 cards
         for (let i = 0; i < props.value.weatherData.length; i++){
@@ -35,7 +35,7 @@ function Cards(props) {
             cards.push(
                 <div className="col">
                     <div className="card">
-                        <img className="card-img-top" src={props.value.meaningData.ico_assets[props.value.weatherData[i].weather]} alt="weather logo"></img>
+                        <img className="card-img-top" src={props.value.meaningData.ico_assets[props.value.weatherData[i].weather]} alt="weather logo"/>
                         <div className="card-body">
                             <h5 className="card-title">
                                 {days[currentDay.getDay()]}
@@ -156,13 +156,13 @@ class Interface extends React.Component {
                 <br></br>
                 <br></br>
                 <br></br>
-                    Location Services provided by: <a href="https://webapps.usgs.gov/" target="_blank">USGS</a>
+                    Location Services provided by: <a href="https://webapps.usgs.gov/" target="_blank" rel="noreferrer">USGS</a>
                     <br></br>
-                    Weather Data provided by: <a href="http://www.7timer.info/index.php?lang=en" target="_blank">7timer</a>
+                    Weather Data provided by: <a href="http://www.7timer.info/index.php?lang=en" target="_blank" rel="noreferrer">7timer</a>
                     <br></br>
-                    Icons provided by: <a href="https://icons8.com/icon/set/weather/ios--animated" target="_blank">Icons8</a>
+                    Icons provided by: <a href="https://icons8.com/icon/set/weather/ios--animated" target="_blank" rel="noreferrer">Icons8</a>
                     <br></br>
-                    Created by: <a href="https://github.com/JoshLove-portfolio" target="_blank">Josh Love</a>
+                    Created by: <a href="https://github.com/JoshLove-portfolio" target="_blank" rel="noreferrer">Josh Love</a>
                 </div>
             </div>
         )
